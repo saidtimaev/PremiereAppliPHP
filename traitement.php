@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    
+    $_SESSION['flash_message'] = "";
 
     if(isset($_POST['submit'])){
 
@@ -19,7 +19,14 @@
             ];
 
             $_SESSION["products"][]= $product;
+
+            $_SESSION['flash_message'] = "Enregistrement effectué !";
  
+        } else {
+
+            $_SESSION['flash_message'] = "L'enregistrement n'a pu être effectué !";
+    
+    
         }
     
     }

@@ -1,5 +1,5 @@
 <?php
-    require "fonctions.php";
+    include "fonctions.php";
 ?>
 
 <!DOCTYPE html>

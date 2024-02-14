@@ -1,5 +1,5 @@
 <?php
-  require "fonctions.php";
+  include "fonctions.php";
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +22,9 @@
         <main>
             <div class="nbProduitsSess">
                 <p>Nombre de produits enregistrés : <?php echo getNbProduits(); ?></p>
+            </div>
+            <div class="enregistrement">
+                <p> <?php echo getMessageFlash(); ?></p>
             </div>
             <div class="containerFormulaire">
                 <h1>Ajouter un produit</h1>
