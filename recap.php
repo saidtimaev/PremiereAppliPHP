@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    require "fonctions.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,8 +19,14 @@
             </ul>
         </nav>
     </header>
+    <div class="nbProduitsSess">
+                <p>Nombre de produits enregistrés : <?php echo getNbProduits(); ?></p>
+            </div>
     <div class="containerRecap">
         <?php
+
+            
+
             if(!isset($_SESSION['products']) || empty($_SESSION['products'])){
                 echo "<p>Aucun produit en session...</p>";
             } else {
@@ -36,7 +42,7 @@
                     "</thead>",
                     "<tbody>";
                 
-                $totalGeneral = 0;    
+                $totalGeneral = 0;
 
                 foreach($_SESSION["products"] as $index => $product){
                     echo "<tr>",
