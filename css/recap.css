@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerRecap{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px solid gray;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(199, 199, 199);
+    text-align: center;
+    padding: 50px;
+}
+
+.containerRecap p{
+    font-size: 20px;
+}
+
+ table,  th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+
+    padding: 5px;
+}
+
+th{
+    background-color: rgb(134, 133, 133);
+}
+
+td{
+    background-color: rgb(255, 255, 255);
+}
+
+.thNom, .tdNom{
+    text-align: left;
+}
+
+header{
+    background-color: aqua;
+    width: 100vw;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    margin: 10px;
+    justify-content: center;
+ 
+}
+
+li{
+    margin: 10px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+}
