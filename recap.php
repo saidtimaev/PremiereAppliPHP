@@ -55,7 +55,7 @@
                             "<td>
                                 <form action='traitement.php' method='post'>
                                     <label>
-                                    <input type='submit' name='submit' value='Supprimer le produit'>
+                                    <input type='submit' name='supprimer' value='Supprimer le produit'>
                                     </label>
                                 </form>
                             </td>",
