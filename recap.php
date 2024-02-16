@@ -53,13 +53,15 @@
                             "<td>
                                 <form action='traitement.php' method='get'>
                                     <label>
-                                        <input type='submit' name='enlever' value='-'>
+                                        <input type='hidden' name='index' value='$index'>
+                                        <input type='submit' name='enleverUn' value='-'>
                                     </label>
                                 </form> "
                                 .$product["qtt"].
                                 " <form action='traitement.php' method='get'>
                                     <label>
-                                        <input type='submit' name='ajouter' value='+'>
+                                        <input type='hidden' name='index' value='$index'>
+                                        <input type='submit' name='ajouterUn' value='+'>
                                     </label>
                                 </form>
                             </td>",

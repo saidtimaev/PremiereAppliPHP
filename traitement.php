@@ -56,8 +56,40 @@
 
         header("Location:recap.php");
 
-        
-    
     }
+
+    if(isset($_GET['enleverUn'])){
+
+        $index = $_GET['index'];
+        
+        $_SESSION["products"][$index]["qtt"] -= 1;
+
+        $price = $_SESSION["products"][$index]["price"];
+        $qtt = $_SESSION["products"][$index]["qtt"];
+
+        $_SESSION["products"][$index]["total"] = $price*$qtt;
+
+
+        header("Location:recap.php");
+
+    }
+
+
+    if(isset($_GET['ajouterUn'])){
+
+        $index = $_GET['index'];
+        
+        $_SESSION["products"][$index]["qtt"] += 1;
+
+        $price = $_SESSION["products"][$index]["price"];
+        $qtt = $_SESSION["products"][$index]["qtt"];
+
+
+        $_SESSION["products"][$index]["total"] = $price*$qtt;
+        
+        header("Location:recap.php");
+
+    }
+
 
   
