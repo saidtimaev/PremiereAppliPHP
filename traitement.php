@@ -45,4 +45,19 @@
     
     }
 
+    if(isset($_GET['supprimerTout'])){
+
+        
+        unset($_SESSION['products']);
+
+        // $_SESSION['products'] = [];
+
+        // array_splice($_SESSION, 1, 1);
+
+        header("Location:recap.php");
+
+        
+    
+    }
+
   

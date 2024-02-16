@@ -74,8 +74,7 @@
                                 <td colspan=6>
                                     <form action='traitement.php' method='get'>
                                         <label>
-                                            <input type='hidden' name='index' value='$index'>
-                                            <input type='submit' name='supprimer' value='Supprimer tous les produits'>
+                                            <input type='submit' name='supprimerTout' value='Supprimer tous les produits'>
                                         </label>
                                     </form>
                                 </td>
@@ -83,6 +82,7 @@
                         "</tbody>",
                         "</table";
 
+                        // var_dump($_SESSION);
             }
         ?>
     </div>
