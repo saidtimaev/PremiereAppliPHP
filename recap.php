@@ -67,8 +67,19 @@
 
                 }
                 echo        "<tr>",
-                                "<td colspan=4>Total général : </td>",
+                                "<td colspan=5>Total général : </td>",
                                 "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
+                            "</tr>",
+                            "<tr>
+                                <td colspan=6>
+                                    <form action='traitement.php' method='get'>
+                                        <label>
+                                            <input type='hidden' name='index' value='$index'>
+                                            <input type='submit' name='supprimer' value='Supprimer tous les produits'>
+                                        </label>
+                                    </form>
+                                </td>
+                            </tr>",
                         "</tbody>",
                         "</table";
 

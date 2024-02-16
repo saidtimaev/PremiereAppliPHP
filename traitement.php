@@ -37,8 +37,6 @@
 
         $index = $_GET['index'];
 
-        
-
         unset($_SESSION["products"][$index]);
 
         header("Location:recap.php");
