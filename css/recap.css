@@ -46,6 +46,7 @@ th{
 
 td{
     background-color: rgb(255, 255, 255);
+    
 }
 
 .thNom, .tdNom{
@@ -73,4 +74,8 @@ li{
     text-decoration: none;
     color: blue;
     font-size: 20px;
+}
+
+form{
+ display: inline-block;
 }

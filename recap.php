@@ -50,7 +50,19 @@
                             "<td>".$index."</td>",
                             "<td class='tdNom'>".$product["name"]."</td>",
                             "<td>".number_format($product["price"], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                            "<td>".$product["qtt"]."</td>",
+                            "<td>
+                                <form action='traitement.php' method='get'>
+                                    <label>
+                                        <input type='submit' name='enlever' value='-'>
+                                    </label>
+                                </form> "
+                                .$product["qtt"].
+                                " <form action='traitement.php' method='get'>
+                                    <label>
+                                        <input type='submit' name='ajouter' value='+'>
+                                    </label>
+                                </form>
+                            </td>",
                             "<td>".number_format($product["total"], 2, ",", "&nbsp;")."&nbsp;€</td>",
                             "<td>
                                 <form action='traitement.php' method='get'>
