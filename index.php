@@ -1,24 +1,21 @@
 <?php
   include "fonctions.php";
+  
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php ob_start(); ?>
         <link rel="stylesheet" href="css/index.css">
+        <?php $styleCSS = ob_get_clean(); ?>
+        <?php ob_start(); ?>
         <title>Ajout produit</title>
-    </head>
-    <body>
-        <header>
-            <nav >
-                <ul class="navigation">
-                    <li><a href="index.php">Enregistrer des produits</a></li>
+        <?php $titrePage = ob_get_clean(); ?>
+    
+        <?php ob_start(); ?>
+        <ul class="navigation">
+                    <li><a class="nav-link active" href="index.php">Enregistrer des produits</a></li>
                     <li><a href="recap.php">Afficher tous les produits en session</a></li>
-                </ul>
-            </nav>
-        </header>
+        </ul>
+        <?php $navigation = ob_get_clean(); ?>
+        <?php ob_start(); ?>
         <main>
             <div class="nbProduitsSess">
                 <p>Nombre de produits enregistrés : <?php echo getNbProduits(); ?></p>
@@ -55,10 +52,16 @@
                 </form>
             </div>
         </main>
+    <?php
+
+        $content = ob_get_clean();
+
+        require_once "template.php";
+
+    ?>    
         
-        
-    </body>
-</html>
+    
+
 
 
 
