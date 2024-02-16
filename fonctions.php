@@ -20,8 +20,15 @@ function getNbProduits(){
 
 
 // Fonction qui permet de récupérer le message flash
-function getMessageFlash(){
-    $message = $_SESSION['flash_message'] ?? "";
+function getMessageFlashIndex(){
+    $message = $_SESSION['flash_message_index'] ?? "";
+    // unset($_SESSION['flash_message']);
+    return $message;
+}
+
+// Fonction qui permet de récupérer le message flash
+function getMessageFlashRecap(){
+    $message = $_SESSION['flash_message_recap'] ?? "";
     // unset($_SESSION['flash_message']);
     return $message;
 }

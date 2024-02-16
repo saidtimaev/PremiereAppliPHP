@@ -24,7 +24,7 @@
                 <p>Nombre de produits enregistrés : <?php echo getNbProduits(); ?></p>
             </div>
             <div class="enregistrement">
-                <p> <?php echo getMessageFlash(); ?></p>
+                <p> <?php echo getMessageFlashIndex(); ?></p>
             </div>
             <div class="containerFormulaire">
                 <h1>Ajouter un produit</h1>

@@ -20,8 +20,11 @@
         </nav>
     </header>
     <div class="nbProduitsSess">
-                <p>Nombre de produits enregistrés : <?php echo getNbProduits(); ?></p>
-            </div>
+        <p>Nombre de produits enregistrés : <?php echo getNbProduits(); ?></p>
+    </div>
+    <div class="messageActionEffectuee">
+        <p> <?php echo getMessageFlashRecap(); ?></p>
+    </div>
     <div class="containerRecap">
         <?php
 

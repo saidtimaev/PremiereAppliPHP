@@ -2,7 +2,8 @@
     session_start();
     
     // On vide le message flash
-    $_SESSION['flash_message'] = "";
+    $_SESSION['flash_message_index'] = "";
+    $_SESSION['flash_message_recap'] = "";
 
 
     // Permet d'enregister un produit
@@ -30,12 +31,12 @@
             $_SESSION["products"][]= $product;
 
             // On crée un message flash de succès
-            $_SESSION['flash_message'] = "Enregistrement effectué !";
+            $_SESSION['flash_message_index'] = "Enregistrement effectué !";
  
         } else {
 
             // Si tous les champs n'ont pas été remplis on crée un message flash d'erreur
-            $_SESSION['flash_message'] = "L'enregistrement n'a pu être effectué !";
+            $_SESSION['flash_message_index'] = "L'enregistrement n'a pu être effectué !";
     
     
         }
@@ -52,6 +53,8 @@
 
         // On définit l'index du produit
         $index = $_GET['index'];
+
+        $_SESSION['flash_message_recap'] = "Le produit ".$_SESSION["products"][$index]['name']. " a été supprimé!" ;
 
         // On supprime le tableau de ce produit de $_SESSION["products"]
         unset($_SESSION["products"][$index]);
@@ -75,6 +78,8 @@
 
         // array_splice($_SESSION, 1, 1);
 
+        $_SESSION['flash_message_recap'] = "Tous les produits ont étés supprimés!";
+
         header("Location:recap.php");
 
     }
@@ -84,8 +89,12 @@
     //Si $_GET contient une clé enleverUn
     if(isset($_GET['enleverUn'])){
 
+        
+
         // On définit l'index du produit
         $index = $_GET['index'];
+
+        $_SESSION['flash_message_recap'] = "La quantité du produit ".$_SESSION["products"][$index]['name']. " a été diminuée de 1!";
         
         // On augmente la quantité de ce produit de 1
         $_SESSION["products"][$index]["qtt"] -= 1;
@@ -106,6 +115,8 @@
 
         // On définit l'index du produit
         $index = $_GET['index'];
+
+        $_SESSION['flash_message_recap'] = "La quantité du produit ".$_SESSION["products"][$index]['name']. " a été augmentée de 1!";
 
         // On augmente la quantité de ce produit de 1
         $_SESSION["products"][$index]["qtt"] += 1;
