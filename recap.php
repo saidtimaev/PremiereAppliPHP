@@ -26,10 +26,11 @@
         <?php
 
             
-
+            // Si aucun produit n'a été enrégistré
             if(!isset($_SESSION['products']) || empty($_SESSION['products'])){
                 echo "<p>Aucun produit en session...</p>";
             } else {
+                // Début table
                 echo "<table>",
                     "<thead>",
                         "<tr>",
@@ -43,8 +44,10 @@
                     "</thead>",
                     "<tbody>";
                 
+                // Initialisation du compteur du total général
                 $totalGeneral = 0;
 
+                // Boucle qui permet d'afficher les produits et leur éléments
                 foreach($_SESSION["products"] as $index => $product){
                     echo "<tr>",
                             "<td>".$index."</td>",
@@ -76,6 +79,7 @@
                             </td>",
                         "</tr>";
                     
+                    // On ajoute le total du produit au total général
                     $totalGeneral += $product["total"];   
                     
 
@@ -95,6 +99,7 @@
                             </tr>",
                         "</tbody>",
                         "</table";
+                        // Fin tableau
 
                         // var_dump($_SESSION);
             }
