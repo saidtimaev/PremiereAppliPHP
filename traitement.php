@@ -33,13 +33,18 @@
     
     }
 
-    if(isset($_POST['supprimer'])){
+    if(isset($_GET['supprimer'])){
 
-        echo "ca marche";
+        $index = $_GET['index'];
+
+        
+
+        unset($_SESSION["products"][$index]);
 
         header("Location:recap.php");
 
+        
     
     }
 
-    
+  

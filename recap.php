@@ -53,15 +53,17 @@
                             "<td>".$product["qtt"]."</td>",
                             "<td>".number_format($product["total"], 2, ",", "&nbsp;")."&nbsp;€</td>",
                             "<td>
-                                <form action='traitement.php' method='post'>
+                                <form action='traitement.php' method='get'>
                                     <label>
-                                    <input type='submit' name='supprimer' value='Supprimer le produit'>
+                                    <input type='hidden' name='index' value='$index'>
+                                    <input type='submit' name='supprimer' value='Supprimer ce produit'>
                                     </label>
                                 </form>
                             </td>",
                         "</tr>";
                     
                     $totalGeneral += $product["total"];   
+                    
 
                 }
                 echo        "<tr>",
