@@ -2,19 +2,10 @@
   include "fonctions.php";
   
 ?>
-        <?php ob_start(); ?>
-        <link rel="stylesheet" href="css/index.css">
-        <?php $styleCSS = ob_get_clean(); ?>
-        <?php ob_start(); ?>
-        <title>Ajout produit</title>
-        <?php $titrePage = ob_get_clean(); ?>
+      
+       
     
-        <?php ob_start(); ?>
-        <ul class="navigation">
-                    <li><a class="nav-link active" href="index.php">Enregistrer des produits</a></li>
-                    <li><a href="recap.php">Afficher tous les produits en session</a></li>
-        </ul>
-        <?php $navigation = ob_get_clean(); ?>
+      
         <?php ob_start(); ?>
         <main>
             <div class="nbProduitsSess">
@@ -53,7 +44,10 @@
             </div>
         </main>
     <?php
-
+        $styleCSS = '<link rel="stylesheet" href="css/index.css">';
+        $title = "Ajout produit";
+        $pageActive = '<li><a class="nav-link active" href="index.php">Enregistrer des produits</a></li>
+                            <li><a class="nav-link" href="recap.php">Enregistrer des produits</a></li>';
         $content = ob_get_clean();
 
         require_once "template.php";

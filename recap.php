@@ -2,19 +2,10 @@
     include "fonctions.php";
    
 ?>
-        <?php ob_start(); ?>
-        <link rel="stylesheet" href="css/recap.css">
-        <?php $styleCSS = ob_get_clean(); ?>
-        <?php ob_start(); ?>
-        <title>Récapitulatif des produits</title>
-        <?php $titrePage = ob_get_clean(); ?>
+        
+       
     
-        <?php ob_start(); ?>
-            <ul class="navigation">
-                <li><a href="index.php">Enregistrer des produits</a></li>
-                <li><a class="nav-link active" href="recap.php">Afficher tous les produits en session</a></li>
-            </ul>
-        <?php $navigation = ob_get_clean(); ?>
+        
         <?php ob_start(); ?>
         <div class="nbProduitsSess">
             <p>Nombre de produits enregistrés : <?php echo getNbProduits(); ?></p>
@@ -107,6 +98,10 @@
         </div>
     <?php
 
+        $styleCSS = '<link rel="stylesheet" href="css/recap.css">';
+        $title = "Récapitulatif des produits";
+        $pageActive = '<li><a class="nav-link" href="index.php">Enregistrer des produits</a></li>
+                        <li><a class="nav-link active" href="recap.php">Enregistrer des produits</a></li>';
         $content = ob_get_clean();
 
         require_once "template.php";
