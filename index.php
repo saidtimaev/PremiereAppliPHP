@@ -45,9 +45,9 @@
         </main>
     <?php
         $styleCSS = '<link rel="stylesheet" href="css/index.css">';
-        $title = "Ajout produit";
+        $titrePage = "Ajout produit";
         $pageActive = '<li><a class="nav-link active" href="index.php">Enregistrer des produits</a></li>
-                            <li><a class="nav-link" href="recap.php">Enregistrer des produits</a></li>';
+                            <li><a class="nav-link" href="recap.php">Récapitulatif</a></li>';
         $content = ob_get_clean();
 
         require_once "template.php";

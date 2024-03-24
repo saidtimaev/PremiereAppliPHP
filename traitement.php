@@ -96,7 +96,7 @@
 
         $_SESSION['flash_message_recap'] = "La quantité du produit ".$_SESSION["products"][$index]['name']. " a été diminuée de 1!";
         
-        // On augmente la quantité de ce produit de 1
+        // On diminue la quantité de ce produit de 1
         $_SESSION["products"][$index]["qtt"] -= 1;
 
         // On fait une MAJ du total de ce produit

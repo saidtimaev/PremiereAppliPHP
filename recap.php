@@ -99,9 +99,9 @@
     <?php
 
         $styleCSS = '<link rel="stylesheet" href="css/recap.css">';
-        $title = "Récapitulatif des produits";
+        $titrePage = "Récapitulatif des produits";
         $pageActive = '<li><a class="nav-link" href="index.php">Enregistrer des produits</a></li>
-                        <li><a class="nav-link active" href="recap.php">Enregistrer des produits</a></li>';
+                        <li><a class="nav-link active" href="recap.php">Récapitulatif</a></li>';
         $content = ob_get_clean();
 
         require_once "template.php";
