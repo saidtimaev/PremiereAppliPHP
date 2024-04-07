@@ -16,6 +16,7 @@
             </div>
             <div class="containerFormulaire">
                 <h1>Ajouter un produit</h1>
+                <!-- FORMULAIRE D'ENREGISTREMENT PRODUIT -->
                 <form action="traitement.php" method="post">
                     <p>
                         <label>
